@@ -9,7 +9,7 @@ RUN apk add --no-cache python && \
 
 
 RUN apk add git
-RUN git clone https://github.com/ismailtasdelen/shodansploit.git  /tmp/shodansploit
+RUN git clone https://github.com/mcphelan/shodansploit.git  /tmp/shodansploit
 
 WORKDIR /tmp/shodansploit
 RUN pip install requests
