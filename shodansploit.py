@@ -249,21 +249,15 @@ def shodansploit_exit():
 	exit()
 
 def pause():
-    programPause = input("\nPress the <ENTER> key to continue...")
+    input("\nPress the <ENTER> key to continue...")
 
 # Author : Ismail Tasdelen
 # GitHub : https://github.com/ismailtasdelen/
 # Linkedin : https://www.linkedin.com/in/ismailtasdelen/
 # Twitter : https://twitter.com/ismailtsdln/
 
-
 # multi function use
-
-def run(shodan_host_ip,host_search,shodan_token_search,shodan_ports,shodan_dns_lookup,shodan_count_search,
-	shodan_dns_reverse,shodan_honeyscore,shodan_profile,shodan_myip,shodan_httpheaders,shodan_api_info,
-	shodan_exploit_author,shodan_exploit_cve,shodan_exploit_msb,shodan_exploit_bid,shodan_exploit_osvdb,
-	shodan_exploit_title,shodan_exploit_description,shodan_exploit_date,shodan_exploit_code,
-	shodan_exploit_platform,shodan_exploit_port,shodansploit_exit):
+def run():
 
 	choice = int(input("Which option number : "))
 
@@ -343,13 +337,8 @@ signal.signal(signal.SIGINT, signal_handler)
 while 1:
     print (searchploit_txt)
     print (shodansploit_menu_txt)
-    try:
-        # batch arguments
-        run(shodan_host_ip,host_search,shodan_token_search,shodan_ports,shodan_dns_lookup,shodan_count_search,
-        	shodan_dns_reverse,shodan_honeyscore,shodan_profile,shodan_myip,shodan_httpheaders,shodan_api_info,
-        	shodan_exploit_author,shodan_exploit_cve,shodan_exploit_msb,shodan_exploit_bid,shodan_exploit_osvdb,
-        	shodan_exploit_title,shodan_exploit_description,shodan_exploit_date,shodan_exploit_code,
-        	shodan_exploit_platform,shodan_exploit_port,shodansploit_exit)
+    try:        
+        run()
 
         pause()
 

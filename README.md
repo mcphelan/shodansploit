@@ -37,7 +37,7 @@ With Shodan Exploit, you will have all your calls on your terminal. It also allo
 
 #### Programming Languages :
 
-* Python
+* Python (3.8)
 
 #### System :
 
