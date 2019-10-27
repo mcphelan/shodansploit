@@ -1,17 +1,9 @@
-FROM alpine
-LABEL MAINTAINER pentestdatabase@gmail.com
-
-RUN apk add --no-cache python && \
-    python -m ensurepip && \
-    rm -r /usr/lib/python*/ensurepip && \
-    pip install --upgrade pip setuptools && \
-    rm -r /root/.cache
-
+FROM python:3.8.0-alpine3.10
 
 RUN apk add git
-RUN git clone https://github.com/mcphelan/shodansploit.git  /tmp/shodansploit
+RUN git clone https://github.com/mcphelan/shodansploit.git  /tmp/mcphelanshodansploit
 
-WORKDIR /tmp/shodansploit
+WORKDIR /tmp/mcphelanshodansploit
 RUN pip install requests
 
 ENTRYPOINT ["python", "shodansploit.py"]
